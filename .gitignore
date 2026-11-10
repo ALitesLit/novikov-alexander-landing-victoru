@@ -1,3 +1,4 @@
+delivery
 .DS_Store
 Thumbs.db
 .env
@@ -6,3 +7,4 @@ Thumbs.db
 /.codex/
 /.agents/
 /.aws/
+/delivery/

@@ -17,10 +17,72 @@ const initMainSlider = () => {
 
     const dots = pagination ? pagination.querySelectorAll("button[data-slide]") : [];
 
+    const photo = section.querySelector(".main-photo img");
+
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    let photoRequest = 0;
+    let photoTransition;
+    let previousPhoto;
+
+
+    const changePhoto = async ( slide ) => {
+        const request = ++photoRequest;
+
+        if (!photo || !slide?.dataset.image) {
+            return;
+        }
+
+        const nextPhoto = new Image();
+
+        nextPhoto.src = slide.dataset.image;
+
+        if (photo.src === nextPhoto.src) {
+            photo.alt = slide.dataset.imageAlt || "";
+            return;
+        }
+
+        try {
+            await nextPhoto.decode();
+        } catch {
+            return;
+        }
+
+        if (request !== photoRequest) {
+            return;
+        }
+
+        photoTransition?.cancel();
+        previousPhoto?.remove();
+
+        if (!reducedMotion) {
+            previousPhoto = photo.cloneNode();
+            previousPhoto.alt = "";
+            previousPhoto.setAttribute("aria-hidden", "true");
+            photo.after(previousPhoto);
+        }
+
+        photo.src = nextPhoto.src;
+        photo.alt = slide.dataset.imageAlt || "";
+
+        if (!reducedMotion) {
+            const outgoingPhoto = previousPhoto;
+
+            photoTransition = outgoingPhoto.animate([
+                { opacity: 1 },
+                { opacity: 0 }
+            ], { duration: 300, easing: "ease" });
+
+            photoTransition.onfinish = () => outgoingPhoto.remove();
+        }
+    };
 
 
     const setActiveSlide = ( swiper ) => {
+        const slide = slides[swiper.activeIndex];
+
+        changePhoto(slide);
+
         dots.forEach(( button ) => {
             const active = Number(button.dataset.slide) === swiper.activeIndex;
 

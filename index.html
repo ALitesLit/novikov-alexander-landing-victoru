@@ -25,7 +25,7 @@
             <div class="main-content">
                 <div class="swiper main-swiper" aria-label="Истории памятников">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide main-slide" aria-hidden="false">
+                        <div class="swiper-slide main-slide" data-image="./static/images/proskurin.png" data-image-alt="Памятник Виктору Проскурину" aria-hidden="false">
                             <h1 class="main-title">
                                 <span>Памятник</span>
                                 <span>Виктору<br>Проскурину</span>
@@ -36,7 +36,7 @@
                             <p class="main-description">Не писать общие слова о «значимости», «масштабе», «вкладе в культуру» и т. п.<br class="desktop-break"> Масштаб должен считываться из самого<br class="desktop-break"> проекта&nbsp; и фактов</p>
                         </div>
 
-                        <div class="swiper-slide main-slide" aria-hidden="true">
+                        <div class="swiper-slide main-slide" data-image="./static/images/memorial-portrait-1.jpg" data-image-alt="Памятник с портретом и цветником" aria-hidden="true">
                             <h1 class="main-title">
                                 <span>Памятник</span>
                                 <span>Виктору<br>Проскурину</span>
@@ -47,7 +47,7 @@
                             <p class="main-description">Не писать общие слова о «значимости», «масштабе», «вкладе в культуру» и т. п.<br class="desktop-break"> Масштаб должен считываться из самого<br class="desktop-break"> проекта&nbsp; и фактов</p>
                         </div>
 
-                        <div class="swiper-slide main-slide" aria-hidden="true">
+                        <div class="swiper-slide main-slide" data-image="./static/images/memorial-portrait-2.jpg" data-image-alt="Памятник на благоустроенном участке" aria-hidden="true">
                             <h1 class="main-title">
                                 <span>Памятник</span>
                                 <span>Виктору<br>Проскурину</span>
@@ -104,9 +104,9 @@
 
                 <div class="gallery gallery-single">
                     <figure class="gallery-photo">
-                        <div class="gallery-image">
+                        <button class="gallery-image gallery-open" type="button" aria-label="Открыть фотографию">
                             <img src="./static/images/memorial-site.jpg" alt="Памятник на благоустроенном участке с оградой" loading="lazy" decoding="async">
-                        </div>
+                        </button>
 
                         <figcaption class="gallery-caption">Небольшая подпись</figcaption>
                     </figure>
@@ -119,9 +119,9 @@
                         <p class="choice"><strong>Выбор только по фотографии.</strong> Понравившийся памятник не всегда подходит конкретному участку. Нужно учитывать его размеры, расположение соседних захоронений и уже существующее благоустройство.</p>
 
                         <div class="photo-text">
-                            <div class="article-image">
+                            <button class="article-image gallery-open" type="button" aria-label="Открыть фотографию">
                                 <img src="./static/images/family-memorial.jpg" alt="Семейный памятник с двумя портретами и крестом" loading="lazy" decoding="async">
-                            </div>
+                            </button>
 
                             <div class="photo-description">
                                 <p>Заказ памятника состоит из нескольких этапов, и многие решения важно принять ещё до начала изготовления.</p>
@@ -138,17 +138,17 @@
 
                 <div class="gallery gallery-pair">
                     <figure class="gallery-photo">
-                        <div class="gallery-image">
+                        <button class="gallery-image gallery-open" type="button" aria-label="Открыть фотографию">
                             <img src="./static/images/memorial-project-1.jpg" alt="Проект памятника с крестом и благоустройством" loading="lazy" decoding="async">
-                        </div>
+                        </button>
 
                         <figcaption class="gallery-caption">Небольшая подпись</figcaption>
                     </figure>
 
                     <figure class="gallery-photo">
-                        <div class="gallery-image crop-project">
+                        <button class="gallery-image crop-project gallery-open" type="button" aria-label="Открыть фотографию">
                             <img src="./static/images/memorial-project-2.jpg" alt="Проект памятника с серой гранитной стелой" loading="lazy" decoding="async">
-                        </div>
+                        </button>
 
                         <figcaption class="gallery-caption">Небольшая подпись</figcaption>
                     </figure>
@@ -176,25 +176,25 @@
 
                 <div class="gallery gallery-triple">
                     <figure class="gallery-photo">
-                        <div class="gallery-image">
+                        <button class="gallery-image gallery-open" type="button" aria-label="Открыть фотографию">
                             <img src="./static/images/memorial-portrait-1.jpg" alt="Памятник с портретом и цветником" loading="lazy" decoding="async">
-                        </div>
+                        </button>
 
                         <figcaption class="gallery-caption">Небольшая подпись</figcaption>
                     </figure>
 
                     <figure class="gallery-photo">
-                        <div class="gallery-image">
+                        <button class="gallery-image gallery-open" type="button" aria-label="Открыть фотографию">
                             <img src="./static/images/memorial-portrait-2.jpg" alt="Памятник с портретом на благоустроенном участке" loading="lazy" decoding="async">
-                        </div>
+                        </button>
 
                         <figcaption class="gallery-caption">Небольшая подпись</figcaption>
                     </figure>
 
                     <figure class="gallery-photo">
-                        <div class="gallery-image">
+                        <button class="gallery-image gallery-open" type="button" aria-label="Открыть фотографию">
                             <img src="./static/images/memorial-portrait-3.jpg" alt="Гранитный памятник с гравированным портретом" loading="lazy" decoding="async">
-                        </div>
+                        </button>
 
                         <figcaption class="gallery-caption">Небольшая подпись</figcaption>
                     </figure>
@@ -220,41 +220,41 @@
 
                 <div class="gallery gallery-mosaic">
                     <figure class="gallery-photo">
-                        <div class="gallery-image crop-tall">
+                        <button class="gallery-image crop-tall gallery-open" type="button" aria-label="Открыть фотографию">
                             <img src="./static/images/memorial-project-3.jpg" alt="Проект мемориального комплекса со скамейкой и цветами" loading="lazy" decoding="async">
-                        </div>
+                        </button>
 
                         <figcaption class="gallery-caption">Небольшая подпись</figcaption>
                     </figure>
 
                     <figure class="gallery-photo">
-                        <div class="gallery-image">
+                        <button class="gallery-image gallery-open" type="button" aria-label="Открыть фотографию">
                             <img src="./static/images/memorial-project-1.jpg" alt="Проект комплекса с крестом" loading="lazy" decoding="async">
-                        </div>
+                        </button>
 
                         <figcaption class="gallery-caption">Небольшая подпись</figcaption>
                     </figure>
 
                     <figure class="gallery-photo">
-                        <div class="gallery-image crop-wide">
+                        <button class="gallery-image crop-wide gallery-open" type="button" aria-label="Открыть фотографию">
                             <img src="./static/images/memorial-project-2.jpg" alt="Проект комплекса с гранитной стелой" loading="lazy" decoding="async">
-                        </div>
+                        </button>
 
                         <figcaption class="gallery-caption">Небольшая подпись</figcaption>
                     </figure>
 
                     <figure class="gallery-photo">
-                        <div class="gallery-image crop-detail">
+                        <button class="gallery-image crop-detail gallery-open" type="button" aria-label="Открыть фотографию">
                             <img src="./static/images/memorial-project-4.jpg" alt="Проект благоустройства семейного захоронения" loading="lazy" decoding="async">
-                        </div>
+                        </button>
 
                         <figcaption class="gallery-caption">Небольшая подпись</figcaption>
                     </figure>
 
                     <figure class="gallery-photo">
-                        <div class="gallery-image">
+                        <button class="gallery-image gallery-open" type="button" aria-label="Открыть фотографию">
                             <img src="./static/images/memorial-project-5.jpg" alt="Проект памятника из тёмного камня" loading="lazy" decoding="async">
-                        </div>
+                        </button>
 
                         <figcaption class="gallery-caption">Небольшая подпись</figcaption>
                     </figure>
@@ -276,5 +276,6 @@
     <script src="./js/swiper-bundle.min.js" defer></script>
     <script src="./js/slider.js" defer></script>
     <script src="./js/scroll.js" defer></script>
+    <script src="./js/gallery.js" defer></script>
 </body>
 </html>
